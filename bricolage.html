@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bricolage</title>
+    <link rel="stylesheet" href="illustrations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Moon+Dance&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+</head>
+<body>
+    <div class="topnav" id="header">
+        <a href="accueil.html" class="lora-normal">Accueil</a>
+        <a href="tarifs.html" class="split lora-normal">Tarifs</a>
+        <a class="split slash lora-normal">/</a>
+        <a href="a_propos.html" class="split lora-normal">A Propos</a>
+        <a class="split slash lora-normal">/</a>
+        <a href="bricolage.html" class="split lora-normal">Bricolage</a>
+        <a class="split slash lora-normal">/</a>
+        <a href="illustrations.html" class="split lora-normal">Illustrations</a>
+    </div>
+
+<div class="titres lora-normal">
+    <h2>Linogravures (matrices) :</h2>
+</div>
+<div class="row">
+    <div class="column">
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/ange_1.JPG" style="width: 100%">
+        </a>
+    </div>
+    <div class="column">
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/soleil.JPG" style="width: 100%">
+        </a>
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/clown_2.JPG" style="width: 100%">
+        </a>
+    </div>
+    <div class="column">
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/ange_2.JPG" style="width: 100%">
+        </a>
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/fleur.JPG" style="width: 100%">
+        </a>
+    </div>
+    <div class="column">
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/rose.JPG" style="width: 100%">
+        </a>
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/exlibris.JPG" style="width: 100%">
+        </a>
+    </div>
+    <div class="column">
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/pot.JPG" style="width: 100%">
+        </a>
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/ange_3.JPG" style="width: 100%">
+        </a>
+    </div>
+</div>
+
+<div class="titres lora-normal">
+    <h2>Linogravures (impressions) :</h2>
+</div>
+<div class="row">
+    <div class="column">
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/ange_1_imp.jpg" style="width: 100%">
+        </a>
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/clown_2_imp.jpg" style="width: 100%">
+        </a>
+    </div>
+    <div class="column">
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/pot_imp_bleu.jpg" style="width: 100%">
+        </a>
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/soleil_imp.jpg" style="width: 100%">
+        </a>
+    </div>
+    <div class="column">
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/pot_imp_rouge.jpg" style="width: 100%">
+        </a>
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/rose_imp.jpg" style="width: 100%">
+        </a>
+    </div>
+    <div class="column">
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/pot_imp_noir.jpg" style="width: 100%">
+        </a>
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/fleur_imp.jpg" style="width: 100%">
+        </a>
+    </div>
+    <div class="column">
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/ange_2_imp.jpg" style="width: 100%">
+        </a>
+        <a href="javascript:void(0)" onclick="lightbox(event)">
+            <img src="image/linos/ange_3_imp.jpg" style="width: 100%">
+        </a>
+    </div>
+</div>
+
+<div id="lightbox">
+    <img src="" alt="media">
+    <a href="javascript:void(0)" class="exit" onclick="lightbox()">
+        <span class="material-symbols-outlined">
+            close
+        </span>
+    </a>
+</div>
+
+
+    <footer>
+        <p>&copy; 2025 Lison Illsutration. Tous droits réservés.</p>
+    </footer>
+    <script src="header.js"></script>
+    <script>
+        function lightbox(event){
+            if(event){
+                let header = document.querySelector("#header");
+                header.classList.add("hidden");
+                const img = event.target.src;
+                const imgLightbox = document.querySelector("#lightbox img");
+                imgLightbox.src = img
+                const lightbox = document.querySelector("#lightbox");
+                lightbox.classList.toggle("active");
+            }
+            else{
+                let header = document.querySelector("#header");
+                header.classList.remove("hidden");
+                const lightbox = document.querySelector("#lightbox");
+                lightbox.classList.toggle("active");
+            }
+        }
+    </script>
+</body>
+</html>
