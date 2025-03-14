@@ -151,6 +151,9 @@ section {
     }
 }
 @media (max-width: 480px) {
+    .menu a {
+        font-size: 0.7em;
+    }
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     
@@ -162,7 +165,7 @@ section {
         padding-top: 0;
     }
     .lison {
-        font-size: 0.3em;
+        font-size: 0.2em;
     }
     #acceuil {
         font-size: 0.1em;
