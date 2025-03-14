@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #000;
     
 }
 
@@ -57,7 +56,6 @@ body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    color :#000;
   }  
 
 
@@ -130,14 +128,20 @@ section {
         font-size: 0.1em;
         line-height: 0;
     }
+    #quelques_dessins{
+        margin-top: 2em;
+        font-size: 0.7em;
+    }
 }
 @media (max-width: 480px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
+    
     }
     section{
         margin:0rem;
-        margin-top: 0.5em;
+        margin-top: 1em;
+        padding: 0;
     }
     .lison {
         font-size: 0.3em;
@@ -145,6 +149,9 @@ section {
     #acceuil {
         font-size: 0.1em;
         line-height: 0;
+    }
+    #quelques_dessins{
+        margin-top: 0em;
     }
 }
 
