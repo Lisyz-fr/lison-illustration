@@ -13,13 +13,16 @@ body {
     background-color: #a1cca5;
     overflow-x: hidden;
 }
-
+.menu {
+    justify-content:center;
+}
 .topnav {
     background-color: #709775;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
+    justify-content:center;
     transition: top 0.3s;
     transition-delay: 0.2s;
     z-index:1;
@@ -139,19 +142,22 @@ section {
         margin:0rem;
     }
     .lison {
+        margin-top: 2em;
+        margin-bottom: 0;
         font-size: 0.5em;
     }
     #acceuil {
+        margin-top: 0;
         font-size: 0.1em;
         line-height: 0;
     }
     #quelques_dessins{
-        margin-top:02em;
+        margin-top:0.2em;
         font-size: 0.7em;
     }
 }
 @media (max-width: 480px) {
-    .menu a {
+    .menu a:not(:first-child) {
         font-size: 0.7em;
     }
     .gallery {
@@ -159,13 +165,14 @@ section {
     
     }
     section{
-        margin:0rem;
+        margin:0em;
         margin-top: 0em;
-        padding: 1em;
+        padding: 0.5em;
         padding-top: 0;
+        padding-bottom: 0;
     }
     .lison {
-        font-size: 0.2em;
+        font-size: 0.3em;
     }
     #acceuil {
         font-size: 0.1em;
