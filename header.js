@@ -12,6 +12,8 @@ document.addEventListener('scroll',() => {
 });
 
 function toggleMenu() {
-  const topnav = document.querySelector(".topnav");
-  topnav.classList.toggle("responsive");
+  const menu = document.querySelector(".menu");
+  menu.classList.toggle("responsive");
+  const bouton_accueil = document.querySelector(".bouton_accueil");
+  bouton_accueil.classList.toggle("responsive_accueil");
 }
