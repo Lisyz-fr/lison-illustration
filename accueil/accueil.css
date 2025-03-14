@@ -57,6 +57,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    color :#000;
   }  
 
 
@@ -132,7 +133,18 @@ section {
 }
 @media (max-width: 480px) {
     .gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section{
+        margin:0rem;
+        margin-top: 0.5em;
+    }
+    .lison {
+        font-size: 0.3em;
+    }
+    #acceuil {
+        font-size: 0.1em;
+        line-height: 0;
     }
 }
 
