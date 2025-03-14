@@ -16,35 +16,23 @@ body {
 
 .topnav {
     background-color: #709775;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    transition: top 0.3s;
-    transition-delay: 0.2s;
-    z-index:1;
+    overflow: hidden;
 }
-.topnav.hidden {
-    top: -80px;
-}
-  .topnav a {
+
+.topnav a {
     float: left;
+    display: block;
+    color: #111d13;
     text-align: center;
-    padding: 1em 0.5em;
+    padding: 14px 16px;
     text-decoration: none;
-    font-size: 1em;
-    color: #111d13
-  }
-  .topnav a:hover {
-    background-color: #415d43;
-  } 
-  .topnav a.slash:hover {
-    background-color: #709775;
-  } 
-  .topnav a.split {
-    float: right;
 }
-.topnav a.icon {
+
+.topnav .icon {
+    display: none; /* Masqué par défaut */
+}
+
+.topnav .icon {
     display : none;
 }
 
@@ -118,15 +106,23 @@ section {
 }
 
 @media (max-width: 768px) {
-    .topnav a:not(:first-child) {
-        display: none; /* Masquer les liens sauf l'icône hamburger */
+    .topnav a:not(:first-child):not(:last-child) {
+        display: none; /* Masquer tous les liens sauf le premier */
     }
-    .topnav a.icon {
-        display: block; /* Afficher l'icône hamburger */
+    .topnav .icon {
+        display: block; /* Afficher le bouton hamburger */
         float: right;
     }
+    .topnav.responsive {
+        position: relative;
+    }
+    .topnav.responsive .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
     .topnav.responsive a {
-        display: block; /* Afficher les liens en mode responsive */
+        display: block; /* Afficher les liens en colonne */
         text-align: left;
     }
     .gallery {
