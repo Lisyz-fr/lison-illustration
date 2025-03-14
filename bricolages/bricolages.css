@@ -66,6 +66,10 @@ display : none;
 .bouton_accueil.responsive_accueil {
     display: none;
 }
+#lightbox img{
+  width: 90%;
+  height: auto;
+}
 }
 @media (max-width: 480px) {
   .menu a:not(:first-child) {
