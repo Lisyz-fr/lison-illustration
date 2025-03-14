@@ -158,7 +158,7 @@ section {
 }
 @media (max-width: 480px) {
     .menu a:not(:first-child) {
-        padding-top:1.85em;
+        padding-top:1.81em;
         font-size: 0.75em;
     }
     .gallery {

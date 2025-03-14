@@ -1,143 +1,162 @@
 /* Reset de base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #111d13;
-    background-color: #a1cca5;
-    overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #111d13;
+  background-color: #a1cca5;
+  overflow-x: hidden;
 }
-
+.menu {
+justify-content:center;
+}
 .topnav {
-  background-color: #709775;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  transition: top 0.3s;
-  transition-delay: 0.2s;
-  z-index:1;
+background-color: #709775;
+position: fixed;
+left: 0;
+right: 0;
+top: 0;
+justify-content:center;
+transition: top 0.3s;
+transition-delay: 0.2s;
+z-index:1;
 }
 .topnav.hidden {
-  top: -80px;
+top: -80px;
 }
 .topnav a {
-  float: left;
-  text-align: center;
-  padding: 1em 0.5em;
-  text-decoration: none;
-  font-size: 1em;
-  color: #111d13
+float: left;
+text-align: center;
+padding: 1em 0.5em;
+text-decoration: none;
+font-size: 1em;
+color: #111d13
 }
 .topnav a:hover {
-  background-color: #415d43;
+background-color: #415d43;
 } 
 .topnav a.slash:hover {
-  background-color: #709775;
+background-color: #709775;
 } 
 .topnav a.split {
-  float: right;
+float: right;
+}
+.topnav a.icon {
+display : none;
 }
 
+@media (max-width: 768px) {
+.menu a {
+    display: none; /* Masquer les liens sauf l'icône hamburger */
+}
+.topnav a.icon {
+    display: block; /* Afficher l'icône hamburger */
+    float: right;
+}
+.menu.responsive a {
+    display: block; /* Afficher les liens en mode responsive */
+    text-align: left;
+}
+.bouton_accueil.responsive_accueil {
+    display: none;
+}
+}
+@media (max-width: 480px) {
+  .menu a:not(:first-child) {
+      padding-top:1.81em;
+      font-size: 0.75em;
+  }
+}
 .moon-dance-regular {
-  font-family: "Moon Dance", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+font-family: "Moon Dance", sans-serif;
+font-weight: 500;
+font-style: normal;
 }
 
 .lora-normal {
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+font-family: "Lora", serif;
+font-optical-sizing: auto;
+font-weight: 500;
+font-style: normal;
 }  
 
 .titres {
-  margin-top: 5rem;
-  text-align: left;
-  padding: 32px;
+margin-top: 5rem;
+text-align: left;
+padding: 32px;
 }
 
 .row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
+display: -ms-flexbox; /* IE10 */
+display: flex;
+-ms-flex-wrap: wrap; /* IE10 */
+flex-wrap: wrap;
+padding: 0 4px;
 }
 
 /* Create four equal columns that sits next to each other */
 .column {
-  -ms-flex: 20%; /* IE10 */
-  flex: 20%;
-  max-width: 20%;
-  padding: 0 4px;
+-ms-flex: 20%; /* IE10 */
+flex: 20%;
+max-width: 20%;
+padding: 0 4px;
 }
 
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
+margin-top: 8px;
+vertical-align: middle;
+width: 100%;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
+.column {
+  -ms-flex: 50%;
+  flex: 50%;
+  max-width: 50%;
 }
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
 }
 
 #lightbox{
-  position: fixed;
-  top: 0;
-  left:0;
-  right:0;
-  bottom:0;
-  background:rgba(0,0,0,0.8);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  display:none;
+position: fixed;
+top: 0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.8);
+display:flex;
+align-items:center;
+justify-content:center;
+display:none;
 }
 
 #lightbox img{
-  object-fit: contain;
-  height:80%;
+object-fit: contain;
+height:80%;
 }
 
 #lightbox.active{
-  display:flex;
+display:flex;
 }
 
 .exit{
-  text-decoration: none;
-  color: #fff;
-  position: absolute;
-  top: 6%;
-  right: 1%;
+text-decoration: none;
+color: #fff;
+position: absolute;
+top: 6%;
+right: 1%;
 }
 
 footer {
-  background-color: #709775;
-  color: #111d13;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 4rem;
+background-color: #709775;
+color: #111d13;
+text-align: center;
+padding: 1rem 0;
+margin-top: 4rem;
 }

@@ -13,13 +13,16 @@ body {
     background-color: #a1cca5;
     overflow-x: hidden;
 }
-
+.menu {
+  justify-content:center;
+}
 .topnav {
   background-color: #709775;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
+  justify-content:center;
   transition: top 0.3s;
   transition-delay: 0.2s;
   z-index:1;
@@ -44,7 +47,32 @@ body {
 .topnav a.split {
   float: right;
 }
+.topnav a.icon {
+  display : none;
+}
 
+@media (max-width: 768px) {
+  .menu a {
+      display: none; /* Masquer les liens sauf l'icône hamburger */
+  }
+  .topnav a.icon {
+      display: block; /* Afficher l'icône hamburger */
+      float: right;
+  }
+  .menu.responsive a {
+      display: block; /* Afficher les liens en mode responsive */
+      text-align: left;
+  }
+  .bouton_accueil.responsive_accueil {
+      display: none;
+  }
+}
+  @media (max-width: 480px) {
+    .menu a:not(:first-child) {
+        padding-top:1.81em;
+        font-size: 0.75em;
+    }
+  }
 .moon-dance-regular {
   font-family: "Moon Dance", sans-serif;
   font-weight: 500;
@@ -92,15 +120,6 @@ body {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
   }
 }
 

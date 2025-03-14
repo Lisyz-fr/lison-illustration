@@ -12,20 +12,23 @@
 </head>
 <body>
     <div class="topnav" id="header">
-        <a href="/accueil" class="lora-normal">Accueil</a>
-        <a href="/tarifs" class="split lora-normal">Tarifs</a>
-        <a class="split slash lora-normal">/</a>
-        <a href="/a_propos" class="split lora-normal">A Propos</a>
-        <a class="split slash lora-normal">/</a>
-        <a href="/bricolages" class="split lora-normal">Bricolage</a>
-        <a class="split slash lora-normal">/</a>
-        <a href="/illustrations" class="split lora-normal">Illustrations</a>
+        <a href="/" class="lora-normal bouton_accueil" aria-label="Accueil">Accueil</a>
+        <div class="menu">
+            <a href="javascript:void(0);" class="icon split" onclick="toggleMenu()">&#9776;</a>
+            <a href="/tarifs" class="split lora-normal">Tarifs</a>
+            <a class="split slash lora-normal">/</a>
+            <a href="/a_propos" class="split lora-normal">A Propos</a>
+            <a class="split slash lora-normal">/</a>
+            <a href="/bricolages" class="split lora-normal">Bricolage</a>
+            <a class="split slash lora-normal">/</a>
+            <a href="/illustrations" class="split lora-normal">Illustrations</a>
+    
+        </div>
     </div>
-
-<div class="titres lora-normal" id="peintures">
+    <div class="titres lora-normal" id="peintures">
     <h2>Peintures (gouaches, aquarelles, acrylliques) :</h2>
-</div>
-<div class="row">
+    </div>
+    <div class="row">
     <div class="column">
         <a href="javascript:void(0)" onclick="lightbox(event)">
             <img src="/image/peintures/arlequin.jpg" style="width: 100%">
@@ -75,12 +78,12 @@
             <img src="/image/peintures/robe_fourreau.jpg" style="width: 100%">
         </a>
     </div>
-</div>
+    </div>
 
-<div class="titres lora-normal" id="croquis">
+    <div class="titres lora-normal" id="croquis">
     <h2>Croquis :</h2>
-</div>
-<div class="row">
+    </div>
+    <div class="row">
     <div class="column">
         <a href="javascript:void(0)" onclick="lightbox(event)">
             <img src="/image/croquis/annee_20.jpg" style="width: 100%">
@@ -121,12 +124,12 @@
             <img src="/image/croquis/toreador.jpg" style="width: 100%">
         </a>
     </div>
-</div>
+    </div>
 
-<div class="titres lora-normal" id="encres">
+    <div class="titres lora-normal" id="encres">
     <h2>Dessins à l'encre de chine :</h2>
-</div>
-<div class="row">
+    </div>
+    <div class="row">
     <div class="column">
         <a href="javascript:void(0)" onclick="lightbox(event)">
             <img src="/image/encres/gaelle.jpg" style="width: 100%">
@@ -197,12 +200,12 @@
             <img src="/image/encres/pull.jpg" style="width: 100%">
         </a>
     </div>
-</div>
+    </div>
 
-<div class="titres lora-normal" id="digitaux">
+    <div class="titres lora-normal" id="digitaux">
     <h2>Dessins digitaux :</h2>
-</div>
-<div class="row">
+    </div>
+    <div class="row">
     <div class="column">
         <a href="javascript:void(0)" onclick="lightbox(event)">
             <img src="/image/digitaux/animatin.jpg" style="width: 100%">
@@ -231,16 +234,16 @@
             <img src="/image/digitaux/cheval.jpg" style="width: 100%">
         </a>
     </div>
-</div>
+    </div>
 
-<div id="lightbox">
+    <div id="lightbox">
     <img src="" alt="media">
     <a href="javascript:void(0)" class="exit" onclick="lightbox()">
         <span class="material-symbols-outlined">
             close
         </span>
     </a>
-</div>
+    </div>
 
 
     <footer>

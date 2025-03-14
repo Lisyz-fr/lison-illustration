@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lison Illustration</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="accueil.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Moon+Dance&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="topnav" id="header">
-        <a href="/accueil" class="lora-normal" aria-label="Accueil">Accueil</a>
-        <a href="/tarifs" class="split lora-normal">Tarifs</a>
-        <a class="split slash lora-normal">/</a>
-        <a href="/a_propos" class="split lora-normal">A Propos</a>
-        <a class="split slash lora-normal">/</a>
-        <a href="/bricolages" class="split lora-normal">Bricolage</a>
-        <a class="split slash lora-normal">/</a>
-        <a href="/illustrations" class="split lora-normal">Illustrations</a>
+        <a href="/" class="lora-normal bouton_accueil" aria-label="Accueil">Accueil</a>
+        <div class="menu">
+            <a href="javascript:void(0);" class="icon split" onclick="toggleMenu()">&#9776;</a>
+            <a href="/tarifs" class="split lora-normal">Tarifs</a>
+            <a class="split slash lora-normal">/</a>
+            <a href="/a_propos" class="split lora-normal">A Propos</a>
+            <a class="split slash lora-normal">/</a>
+            <a href="/bricolages" class="split lora-normal">Bricolage</a>
+            <a class="split slash lora-normal">/</a>
+            <a href="/illustrations" class="split lora-normal">Illustrations</a>
+        </div>
+        
     </div>
 
     <section id="accueil">
@@ -29,25 +33,25 @@
         <h2 class="lora-normal">Découvrez mon travail à travers différentes techniques :</h2>
         <div class="gallery">
             <div class="container">
-                <img src="image/croquis/caravage.jpg">
+                <img src="/image/croquis/caravage.jpg">
                 <a href="/illustrations#croquis" class="overlay">
                     <div class="text moon-dance-regular">Croquis</div>
                 </a>
             </div>
             <div class="container">
-                <img href="/illustrations#encres" src="image/encres/helene_2.jpg">
+                <img href="/illustrations#encres" src="/image/encres/helene_2.jpg">
                 <a href="/illustrations#encres" class="overlay">
                     <div class="text moon-dance-regular">Encres</div>
                 </a>
             </div>
             <div class="container">
-                <img href="/illustrations#peintures" src="image/peintures/fond_rose.jpg">
+                <img href="/illustrations#peintures" src="/image/peintures/fond_rose.jpg">
                 <a href="/illustrations#peintures" class="overlay">
                     <div class="text moon-dance-regular">Peintures</div>
                 </a>
             </div>
             <div class="container">
-                <img href="/illustrations#digitaux" src="image/digitaux/cabaret.png">
+                <img href="/illustrations#digitaux" src="/image/digitaux/cabaret.png">
                 <a href="/illustrations#digitaux" class="overlay">
                     <div class="text moon-dance-regular">Digitaux</div>
                 </a>
@@ -59,6 +63,6 @@
         <p class="lora-normal">&copy; 2025 Lison Illustration. Tous droits réservés.</p>
     </footer>
 
-    <script src="header.js"></script>
+    <script src="/header.js"></script>
 </body>
 </html>

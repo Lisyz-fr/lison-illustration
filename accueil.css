@@ -13,26 +13,41 @@ body {
     background-color: #a1cca5;
     overflow-x: hidden;
 }
-
+.menu {
+    justify-content:center;
+}
 .topnav {
     background-color: #709775;
-    overflow: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    justify-content:center;
+    transition: top 0.3s;
+    transition-delay: 0.2s;
+    z-index:1;
 }
-
-.topnav a {
+.topnav.hidden {
+    top: -80px;
+}
+  .topnav a {
     float: left;
-    display: block;
-    color: #111d13;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1em 0.5em;
     text-decoration: none;
+    font-size: 1em;
+    color: #111d13
+  }
+  .topnav a:hover {
+    background-color: #415d43;
+  } 
+  .topnav a.slash:hover {
+    background-color: #709775;
+  } 
+  .topnav a.split {
+    float: right;
 }
-
-.topnav .icon {
-    display: none; /* Masqué par défaut */
-}
-
-.topnav .icon {
+.topnav a.icon {
     display : none;
 }
 
@@ -106,24 +121,19 @@ section {
 }
 
 @media (max-width: 768px) {
-    .topnav a:not(:first-child):not(:last-child) {
-        display: none; /* Masquer tous les liens sauf le premier */
+    .menu a {
+        display: none; /* Masquer les liens sauf l'icône hamburger */
     }
-    .topnav .icon {
-        display: block; /* Afficher le bouton hamburger */
+    .topnav a.icon {
+        display: block; /* Afficher l'icône hamburger */
         float: right;
     }
-    .topnav.responsive {
-        position: relative;
-    }
-    .topnav.responsive .icon {
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-    .topnav.responsive a {
-        display: block; /* Afficher les liens en colonne */
+    .menu.responsive a {
+        display: block; /* Afficher les liens en mode responsive */
         text-align: left;
+    }
+    .bouton_accueil.responsive_accueil {
+        display: none;
     }
     .gallery {
         grid-template-columns: repeat(2, 1fr);
@@ -132,27 +142,35 @@ section {
         margin:0rem;
     }
     .lison {
+        margin-top: 2em;
+        margin-bottom: 0;
         font-size: 0.5em;
     }
     #acceuil {
+        margin-top: 0;
         font-size: 0.1em;
         line-height: 0;
     }
     #quelques_dessins{
-        margin-top: 2em;
+        margin-top:0.2em;
         font-size: 0.7em;
     }
 }
 @media (max-width: 480px) {
+    .menu a:not(:first-child) {
+        padding-top:1.81em;
+        font-size: 0.75em;
+    }
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     
     }
     section{
-        margin:0rem;
-        margin-top: 1em;
-        padding: 1em;
+        margin:0em;
+        margin-top: 0em;
+        padding: 0.5em;
         padding-top: 0;
+        padding-bottom: 0;
     }
     .lison {
         font-size: 0.3em;
