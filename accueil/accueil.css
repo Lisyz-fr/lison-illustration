@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #000;
     
 }
 
@@ -112,6 +113,27 @@ section {
     height: 100%;
     border-radius: 8px;
 
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section{
+        margin:0rem;
+    }
+    .lison {
+        font-size: 0.5em;
+    }
+    #acceuil {
+        font-size: 0.1em;
+        line-height: 0;
+    }
+}
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 .text {
