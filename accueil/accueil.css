@@ -158,7 +158,8 @@ section {
 }
 @media (max-width: 480px) {
     .menu a:not(:first-child) {
-        font-size: 0.7em;
+        padding-top:1.85em;
+        font-size: 0.75em;
     }
     .gallery {
         grid-template-columns: repeat(2, 1fr);
