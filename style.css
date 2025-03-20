@@ -1,4 +1,3 @@
-/* Reset de base */
 * {
     margin: 0;
     padding: 0;
@@ -62,63 +61,7 @@ body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-  }  
-
-
-
-section {
-    padding: 2rem;
-    margin: 1rem 0;
-}
-
-#accueil {
-    background-color: #a1cca5;
-    font-size: 6em;
-    text-align: center;
-    line-height: 4.5;
-}
-#quelques_dessins{
-    margin-top: 12em;
-}
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top:1rem;
-}
-.container {
-    position: relative;
-    width: 100%;
-
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color:#415d43;
-    border-radius: 8px;
-
-}
-
-.container:hover .overlay {
-    opacity: 1;
-    transition: .0s ease;
-
-}
-
-.gallery img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-
-}
+  }
 
 @media (max-width: 768px) {
     .menu a {
@@ -135,62 +78,12 @@ section {
     .bouton_accueil.responsive_accueil {
         display: none;
     }
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    section{
-        margin:0rem;
-    }
-    .lison {
-        margin-top: 2em;
-        margin-bottom: 0;
-        font-size: 0.5em;
-    }
-    #acceuil {
-        margin-top: 0;
-        font-size: 0.1em;
-        line-height: 0;
-    }
-    #quelques_dessins{
-        margin-top:0.2em;
-        font-size: 0.7em;
-    }
 }
 @media (max-width: 480px) {
     .menu a:not(:first-child) {
         padding-top:1.81em;
         font-size: 0.75em;
     }
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    
-    }
-    section{
-        margin:0em;
-        margin-top: 0em;
-        padding: 0.5em;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    .lison {
-        font-size: 0.3em;
-    }
-    #acceuil {
-        font-size: 0.1em;
-        line-height: 0;
-    }
-    #quelques_dessins{
-        margin-top: 0em;
-    }
-}
-
-.text {
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color:#a1cca5;
-    font-size: 3em;
 }
 
 footer {
