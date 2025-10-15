@@ -1,0 +1,53 @@
+name: 🔄 Sync images from Google Drive
+
+on:
+  # Lancement automatique toutes les 6 heures
+  schedule:
+    - cron: "0 */6 * * *"
+  # Lancement manuel possible depuis l'interface GitHub Actions
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Synchronize images folder
+
+    steps:
+      # 1️⃣ Récupérer le dépôt GitHub
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2️⃣ Installer rclone sur le runner GitHub
+      - name: Install rclone
+        run: sudo apt-get install -y rclone
+
+      # 3️⃣ Configurer rclone avec ton secret GitHub
+      - name: Setup rclone configuration
+        run: |
+          mkdir -p ~/.config/rclone
+          echo "${{ secrets.RCLONE_CONF }}" > ~/.config/rclone/rclone.conf
+
+      # 4️⃣ Synchroniser le dossier Google Drive -> dossier images/
+      - name: Sync from Google Drive to local images folder
+        run: |
+          # "gdrive" = nom du remote défini avec "rclone config"
+          # "Illustrations" = nom du dossier sur ton Google Drive
+          rclone sync "lison-illustration:Lison-Illustrations" "test-sync" \
+            --create-empty-src-dirs \
+            --checksum \
+            --transfers=10 \
+            --verbose
+
+      # 5️⃣ Ajouter, commit et push uniquement s'il y a des changements
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Lison Sync Bot"
+          git config --global user.email "actions@github.com"
+          git add images
+          if git diff --cached --quiet; then
+            echo "✅ Aucun changement détecté dans images/"
+          else
+            git commit -m "🔄 Sync images from Google Drive [bot]"
+            git push
+            echo "✅ Images synchronisées avec succès depuis Google Drive."
+          fi
