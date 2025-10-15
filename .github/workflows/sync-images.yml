@@ -28,6 +28,14 @@ jobs:
           echo "${{ secrets.RCLONE_CONF }}" > ~/.config/rclone/rclone.conf
 
       # 4️⃣ Synchroniser le dossier Google Drive -> dossier images/
+      - name: tester si rclone fonctionne
+        run: |
+          # "gdrive" = nom du remote défini avec "rclone config"
+          # "Illustrations" = nom du dossier sur ton Google Drive
+          rclone ls lison-illustration:
+
+
+      # 4️⃣ Synchroniser le dossier Google Drive -> dossier images/
       - name: Sync from Google Drive to local images folder
         run: |
           # "gdrive" = nom du remote défini avec "rclone config"
