@@ -25,7 +25,7 @@ jobs:
       - name: Setup rclone configuration
         run: |
           mkdir -p ~/.config/rclone
-          echo "${{ vars.RCLONE_CONF_BIS_64 }}" | base64 --decode  > ~/.config/rclone/rclone.conf
+          echo "${{ secrets.RCLONE_CONF_64 }}" | base64 --decode  > ~/.config/rclone/rclone.conf
 
       # 4️⃣ Synchroniser le dossier Google Drive -> dossier images/
       - name: voir le contenu du secret
