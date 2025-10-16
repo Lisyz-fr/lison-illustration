@@ -49,7 +49,7 @@ jobs:
         run: |
           # "gdrive" = nom du remote défini avec "rclone config"
           # "Illustrations" = nom du dossier sur ton Google Drive
-          rclone sync "lison-illustration:Lison-Illustrations" "test-sync" \
+          rclone sync "lison-illustration:Illustrations" "test-sync" \
             --create-empty-src-dirs \
             --checksum \
             --transfers=10 \
