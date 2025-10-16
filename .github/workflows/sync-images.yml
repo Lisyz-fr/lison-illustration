@@ -68,7 +68,7 @@ jobs:
             echo "✅ Aucun changement détecté dans images/"
           else
             git commit -m "🔄 Sync images from Google Drive [bot]"
-            git pull --rebase origin main || true
-            git push origin HEAD:main
+            git pull --rebase origin accueil || true
+            git push origin HEAD:accueil
             echo "✅ Images synchronisées avec succès depuis Google Drive."
           fi
